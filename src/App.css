@@ -1,0 +1,34 @@
+.bg-custom-green {
+  background-color: #5F6F52 !important; /* Replace with your desired hex code */
+}
+.text-custom-green {
+  color: #5F6F52; /* Replace with your desired hex code */
+}
+.border-custom-green {
+  border: solid 3px #5F6F52; /* Replace with your desired hex code */
+}
+.bg-custom-green-light {
+  background-color: #708063a9 !important;
+}
+.home-wrapper-height {
+  min-height: calc(100vh + 4rem);
+  margin-top: -4rem;
+}
+.home-wrapper-img {
+  background-image: url('./assets/images/background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper-height{
+  min-height: 100vh;
+}
+.rounded-xxl {
+  border-radius: 1.5rem;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.text-justify {
+  text-align: justify;
+}
