@@ -22,7 +22,7 @@ const Navbar = () => {
       <img src={logo} className="h-8" alt="Website Logo" width={"202px"} height={"40px"}/>
   </a>
   <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-  <button type="button" className="flex items-center gap-2 focus:outline-none text-white bg-custom-green hover:bg-custom-green-light font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+  <button type="button" className="sm:flex hidden items-center lg:text-md md:text-sm text-md gap-2 focus:outline-none text-white bg-custom-green hover:bg-custom-green-light font-medium rounded-lg text-sm md:px-2.5 px-5 lg:px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
     <img src={cartIcon} alt="cart icon" />
     <span>Shop Now</span>
   </button>
@@ -34,8 +34,8 @@ const Navbar = () => {
         </svg>
     </button>
   </div>
-  <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-    <ul className="flex flex-col text-md font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+  <div className="items-center justify-between md:bg-transparent bg-white hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+    <ul className="flex flex-col lg:text-md md:text-sm text-md font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
         <a href="#" className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-green-700 md:dark:text-green-500" aria-current="page">Home</a>
       </li>
@@ -43,7 +43,7 @@ const Navbar = () => {
         <a href="#services" className="block py-2 px-3 md:p-0 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-950 md:dark:hover:text-gray-900 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
       </li>
       <li>
-        <a href="#" className="block py-2 px-3 md:p-0 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-950 md:dark:hover:text-gray-900 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Facility</a>
+        <a href="#facility" className="block py-2 px-3 md:p-0 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-950 md:dark:hover:text-gray-900 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Facility</a>
       </li>
       <li>
         <a href="#" className="block py-2 px-3 md:p-0 text-gray-800 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-950 d:dark:hover:text-gray-900 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>

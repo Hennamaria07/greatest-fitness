@@ -32,3 +32,16 @@
 .text-justify {
   text-align: justify;
 }
+/* carousel.css */
+.slick-next:before, .slick-prev:before {
+  color: #5F6F52 !important;
+}
+
+@media (max-width: 800px) {
+  .home-wrapper-img {
+    background-image: url('https://images.unsplash.com/photo-1593164842264-854604db2260?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+}
