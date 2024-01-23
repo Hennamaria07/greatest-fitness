@@ -67,7 +67,7 @@ const MyCarousel = () => {
     <div>
     <Slider {...settings}>
       {serviceData && serviceData.map((data, index) => (
-        <div key={index} className="col text-center text-gray-800 max-w-full md:max-w-80 h-96 py-12 px-9 bg-gray-200 rounded-xxl">
+        <div key={index} className="col text-center text-gray-800 max-w-full md:max-w-80 hover:max-w-96 cursor-pointer h-96 py-12 px-9 bg-gray-200 rounded-xxl my-carousel-item">
         <img src={data.icon} alt="service icon" className="mx-auto pb-2"/>
         <h3 className='text-2xl font-semibold'>{data.title}</h3>
         <p className='text-sm leading-6 py-3'>{data.des}</p>

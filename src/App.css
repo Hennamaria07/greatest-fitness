@@ -36,12 +36,49 @@
 .slick-next:before, .slick-prev:before {
   color: #5F6F52 !important;
 }
+.contact-bg{
+  max-height: 100%;
+  max-width: 100%;
+  background-image: url('../src/assets/images/contact.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.border-bottom {
+  border-bottom: 1px solid #5F6F52;
+}
+/* .hover-height {
+  max-height: 28rem;
+} */
+.my-carousel-item {
+  transition: max-width 0.3s ease-in-out;
+}
+
+.my-carousel-item:hover {
+  max-width: 100%;
+}
 
 @media (max-width: 800px) {
   .home-wrapper-img {
     background-image: url('https://images.unsplash.com/photo-1593164842264-854604db2260?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
     background-size: cover;
+  }
+}
+
+@media (min-width: 1317px) {
+  .xl-max-h-80vh {
+    max-height: 84vh;
+  }
+}
+@media (min-width: 1132px) and (max-width: 1333px) {
+  .lg-max-h-80vh {
+    max-height: 92vh;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1132px) {
+  .lg-max-h-80vh {
+    max-height: 100vh;
   }
 }
