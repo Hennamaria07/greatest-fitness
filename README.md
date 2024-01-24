@@ -1,6 +1,6 @@
 # Greatest Fitness Yoga Studio
 
-Welcome to the Greatest Fitness Yoga Studio! This project is a responsive and dynamic website built using Vite and React. Check out our live website: [Greatest Fitness Yoga Studio](https://great-fitness-yoga-studio.netlify.app/).
+Welcome to the Greatest Fitness Yoga Studio! This project is a responsive and dynamic website built using React. Check out our live website: [Greatest Fitness Yoga Studio](https://great-fitness-yoga-studio.netlify.app/).
 
 ## Table of Contents
 - [Overview](#overview)
