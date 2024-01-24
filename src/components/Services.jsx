@@ -17,6 +17,9 @@ export const Services = () => {
         <div className="row py-11">
     <MyCarousel />
         </div>
+        <div className="flex justify-center">
+        <button type="button" className="focus:outline-none font-semibold text-white bg-custom-green hover:bg-custom-green-light font-medium rounded-md text-sm p-3 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Get Started Today</button>
+        </div>
     </div>
     </section>
    </>
