@@ -12,6 +12,7 @@
 }
 .home-wrapper-height {
   min-height: calc(100vh + 4rem);
+  overflow: hidden;
   margin-top: -4rem;
 }
 .home-wrapper-img {
