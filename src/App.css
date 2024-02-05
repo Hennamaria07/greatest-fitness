@@ -5,6 +5,9 @@
 .text-custom-green {
   color: #5F6F52; /* Replace with your desired hex code */
 }
+.w-100{
+  width: 100% !important;
+}
 .border-custom-green {
   border: solid 3px #5F6F52; /* Replace with your desired hex code */
 }

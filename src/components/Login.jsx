@@ -16,9 +16,9 @@ const Login = () => {
     const errors = {};
 
     if (password === "") {
-      errors.name = "Please enter your password";
+      errors.password = "Please enter your password";
     } else if (!passwordRegEx.test(password)) {
-      errors.name = "Password must contain at least one letter, one digit, and be at least 8 characters long";
+      errors.password = "Password must contain at least one letter, one digit, and be at least 8 characters long";
     }
 
     if (email === "") {
@@ -35,7 +35,7 @@ const Login = () => {
     const errors = validate();
 
     if (errors) {
-      setPasswordError(errors.name || "");
+      setPasswordError(errors.password || "");
       setEmailError(errors.email || "");
 
     } else {
@@ -49,9 +49,6 @@ const Login = () => {
       <section className="w-sreen h-screen">
         <div className="login-wrapper">
           <div className="row grid md:grid-cols-2">
-            <div className="h-screen hidden md:grid place-items-center bg-[#5F6F52]">
-              <img src={loginYoga} alt="yoga imgage" />
-            </div>
             <div className="flex justify-center items-center h-screen mx-5">
               <div>
                 <div className='text-center'>
@@ -70,15 +67,18 @@ const Login = () => {
                     <p className="text-red-500">{passwordError}</p>
                   </div>
                   <div className="mb-5 flex justify-between">
-                    <Link className='text-sm font-medium text-gray-900 '>Forget Password?</Link>
+                    <Link to={'/reset-password'} className='text-sm font-medium text-gray-900 '>Forget Password?</Link>
                   </div>
                   <div className="grid mb-5 place-items-center">
                     <button type="submit" className="border-[#5F6F52] border-2 hover:bg-[#5F6F52] hover:text-white px-4 py-1.5">Login</button>
                   </div>
-                  <p className='text-right'>Not a member? <Link className='ps-2 text-[#5F6F52] font-semibold'>Signup</Link></p>
+                  <p className='text-right'>Not a member? <Link to={'/signup'} className='ps-2 text-[#5F6F52] font-semibold'>Signup</Link></p>
                 </form>
               </div>
 
+            </div>
+            <div className="h-screen hidden md:grid place-items-center bg-[#5F6F52]">
+              <img src={loginYoga} alt="yoga imgage" />
             </div>
           </div>
         </div>

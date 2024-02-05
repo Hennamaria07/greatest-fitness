@@ -1,6 +1,5 @@
 import React from 'react'
-import { About, Contact, Facility, Home, NavBar, Services } from '../components'
-import { Footer } from 'flowbite-react'
+import { About, Contact, Facility, Home, NavBar, Services, Footer } from '../components'
 
 const Layout = () => {
   return (
