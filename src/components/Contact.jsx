@@ -1,7 +1,7 @@
 import React from 'react';
 import contactIcon from '../assets/images/Contact-icon.svg';
 
-export const Contact = () => {
+const Contact = () => {
   return (
     <>
     <section id='contact' className='min-h-96'>
@@ -25,3 +25,5 @@ export const Contact = () => {
     </>
   )
 }
+
+export default Contact

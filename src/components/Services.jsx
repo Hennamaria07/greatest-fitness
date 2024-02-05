@@ -2,7 +2,7 @@ import React from 'react';
 import MyCarousel from './MyCarousel';
 
 
-export const Services = () => {
+const Services = () => {
 
   return (
    <>
@@ -25,3 +25,5 @@ export const Services = () => {
    </>
   )
 }
+
+export default Services
