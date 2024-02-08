@@ -4,8 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import instance from '../axios';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from 'react-redux';
+import { authenication } from '../redux/userAuthSlice.js';
 
 const Login = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
   const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
@@ -52,6 +55,13 @@ const Login = () => {
       {
         withCredentials: true
       });
+      if(res.data.isAuthenticated){
+        dispatch(authenication({
+          user: res.data.user,
+          token: res.data.accessToken,
+          isAuthenticated: res.data.isAuthenticated
+        }))
+      }
       if (res.data.message) {
         toast.success(res.data.message, {
           position: "top-right",
