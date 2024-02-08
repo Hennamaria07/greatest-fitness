@@ -55,13 +55,8 @@ const Login = () => {
       {
         withCredentials: true
       });
-      if(res.data.isAuthenticated){
-        dispatch(authentication({
-          user: res.data.user,
-          token: res.data.accessToken,
-          isAuthenticated: res.data.isAuthenticated
-        }))
-      }
+      console.log(res.data);
+
       if (res.data.message) {
         toast.success(res.data.message, {
           position: "top-right",
@@ -74,6 +69,11 @@ const Login = () => {
           theme: "colored",
         })
       }
+      dispatch(authentication({
+        user: res.data.user,
+        token: res.data.accessToken,
+        isAuthenticated: res.data.isAuthenticated
+      }))
       setTimeout(() => navigate('/'), 1000)
     } catch (error) {
       console.log(error);
