@@ -55,7 +55,6 @@ const Login = () => {
       {
         withCredentials: true
       });
-      console.log(res.data);
 
       if (res.data.message) {
         toast.success(res.data.message, {
@@ -74,6 +73,8 @@ const Login = () => {
         token: res.data.accessToken,
         isAuthenticated: res.data.isAuthenticated
       }))
+      
+      console.log(res.data);
       setTimeout(() => navigate('/'), 1000)
     } catch (error) {
       console.log(error);
