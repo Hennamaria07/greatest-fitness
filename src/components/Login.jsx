@@ -45,7 +45,7 @@ const Login = () => {
     setEmailError("");
     setPasswordError("");
     try {
-      const res = await instance.post("/user/login", {
+      const res = await instance.post("/login", {
         email,
         password
       },

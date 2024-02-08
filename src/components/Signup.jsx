@@ -69,7 +69,7 @@ const Signup = () => {
     setPasswordError("");
     setConfirmPasswordError("");
     try {
-      const res = await instance.post("/user/sign-up", {
+      const res = await instance.post("/sign-up", {
         fullName: name,
         email,
         password,
