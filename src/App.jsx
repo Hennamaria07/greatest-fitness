@@ -3,13 +3,12 @@ import './App.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import {Login, Signup, UpdatePassword } from './components';
 import Layout from './page/Layout.jsx';
-import ForgetPassword from './components/ForgetPassword.jsx';
 import ProtectedRouter from './utils/protectedRouter.jsx';
 import Booking from './components/Booking.jsx';
 import { useSelector } from 'react-redux';
 
 function App() {
-  const isAuthenticated = useSelector(state => state.userAuthSlice.isAuthenticated)
+  const isAuthenticated = useSelector(state => state.userAuth.isAuthenticated)
   return (
     <BrowserRouter>
     <Routes>

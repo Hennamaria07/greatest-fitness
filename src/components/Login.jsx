@@ -5,7 +5,7 @@ import instance from '../axios';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-import { authenication } from '../redux/userAuthSlice.js';
+import { authentication } from '../redux/userAuthSlice.js';
 
 const Login = () => {
   const dispatch = useDispatch()
@@ -56,7 +56,7 @@ const Login = () => {
         withCredentials: true
       });
       if(res.data.isAuthenticated){
-        dispatch(authenication({
+        dispatch(authentication({
           user: res.data.user,
           token: res.data.accessToken,
           isAuthenticated: res.data.isAuthenticated
