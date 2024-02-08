@@ -5,7 +5,7 @@ import instance from '../axios';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-import { authentication } from '../redux/userAuthSlice.js';
+import { userAuth } from '../redux/userAuthSlice';
 
 const Login = () => {
   const dispatch = useDispatch()
@@ -55,8 +55,15 @@ const Login = () => {
       {
         withCredentials: true
       });
-
-      if (res.data.message) {
+      if (result.data.success) {
+        if(result.data.isAuthenticated) {
+          dispatch(userAuth({
+            user: result.data.user,
+            token: result.data.token,
+            isAuthenticated: result.data.isAuthenticated
+          }))
+        }
+      }
         toast.success(res.data.message, {
           position: "top-right",
           hideProgressBar: false,
@@ -67,14 +74,7 @@ const Login = () => {
           transition: Slide,
           theme: "colored",
         })
-      }
-      dispatch(authentication({
-        user: res.data.user,
-        token: res.data.accessToken,
-        isAuthenticated: res.data.isAuthenticated
-      }))
-      
-      console.log(res.data);
+      console.log(res.data.isAuthenticated);
       setTimeout(() => navigate('/'), 1000)
     } catch (error) {
       console.log(error);

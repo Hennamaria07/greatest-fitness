@@ -5,17 +5,18 @@ const initialState = {
     token: null,
     isAuthenticated: false
 }
-const userAuthSlice = createSlice({
-    name: "userAuth",
+
+export const userAuthSlice = createSlice({
+    name: 'userAuth',
     initialState,
     reducers: {
-        authentication: (state, action) => {
-            state.user = action.payload.user,
-            state.token = action.payload.token,
-            state.isAuthenticated = action.payload.isAuthenticated
+        userAuth: (state, action) => {
+            state.user = action.payload.user;
+            state.token = action.payload.token;
+            state.isAuthenticated = action.payload.isAuthenticated ;
         }
     }
 })
 
-export const {authentication} = userAuthSlice.actions;
+export const {userAuth} = userAuthSlice.actions;
 export default userAuthSlice.reducer;

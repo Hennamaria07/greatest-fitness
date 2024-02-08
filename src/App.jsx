@@ -8,7 +8,7 @@ import Booking from './components/Booking.jsx';
 import { useSelector } from 'react-redux';
 
 function App() {
-  const isAuthenticated = useSelector(state => state.userAuth.isAuthenticated)
+  const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   return (
     <BrowserRouter>
     <Routes>
