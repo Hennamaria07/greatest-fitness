@@ -45,7 +45,11 @@ const Login = () => {
     setEmailError("");
     setPasswordError("");
     try {
+<<<<<<< HEAD
       const res = await instance.post("api/v1/user/login", {
+=======
+      const res = await instance.post("/login", {
+>>>>>>> 4907044e857ae3b6f87ac8311fcf490d6852432f
         email,
         password
       },
