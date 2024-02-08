@@ -23,6 +23,7 @@ import ig from '../images/ig.svg';
 import fb from '../images/fb.svg';
 import yt from '../images/yt.svg';
 import x from '../images/x.svg';
-import loginYoga from "../images/login-yoga.png"
+import loginYoga from "../images/login-yoga.png";
+import forget from "../images/forget.avif"
 
-export {Spa, Towel, Yoga, Rugs, one, two, three, four, imgLeft, flow, yin, fly, strech, col1, col2, col3, col4, col5, col6, contactImg, x, yt, Logo, ig, fb, loginYoga};
+export {Spa, Towel, Yoga, Rugs, one, two, three, four, imgLeft, flow, yin, fly, strech, col1, col2, col3, col4, col5, col6, contactImg, x, yt, Logo, ig, fb, loginYoga, forget};

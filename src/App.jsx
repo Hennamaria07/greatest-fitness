@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import { NavBar, Footer, Login, Signup, UpdatePassword } from './components';
+import {Login, Signup, UpdatePassword } from './components';
 import Layout from './page/Layout.jsx';
+import ForgetPassword from './components/ForgetPassword.jsx';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Route path='/' element={<Layout />}/>
       <Route path='/login' element={<Login />}/>
       <Route path='/signup' element={<Signup />}/>
-      <Route path='/reset-password' element={<UpdatePassword />}/>
+      {/* <Route path='/reset-password/:token' element={<UpdatePassword />}/> */}
+      {/* <Route path='/forget-password' element={<ForgetPassword />}/> */}
     </Routes>
     </BrowserRouter>
   );
