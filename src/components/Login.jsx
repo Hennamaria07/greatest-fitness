@@ -48,19 +48,19 @@ const Login = () => {
     setEmailError("");
     setPasswordError("");
     try {
-      const res = await instance.post("api/v1/user/login", {
+      const res = await instance.post("/api/v1/user/login", {
         email,
         password
       },
       {
         withCredentials: true
       });
-      if (result.data.success) {
-        if(result.data.isAuthenticated) {
+      if (res.data.success) {
+        if(res.data.isAuthenticated) {
           dispatch(userAuth({
-            user: result.data.user,
-            token: result.data.accessToken,
-            isAuthenticated: result.data.isAuthenticated
+            user: res.data.user,
+            token: res.data.accessToken,
+            isAuthenticated: res.data.isAuthenticated
           }))
         }
       }

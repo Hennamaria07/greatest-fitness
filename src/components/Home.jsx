@@ -1,6 +1,9 @@
 import React from 'react';
 import contactIcon from '../assets/images/Contact-icon.svg';
 import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
+import Session from './Session.jsx';
+
 
 const Home = () => {
   return (
@@ -13,7 +16,8 @@ const Home = () => {
                 <h1 className='text-2xl sm:text-4xl lg:text-4xl xl:text-5xl text-gray-800'>YOGA FIRST <span className='block'>FITNESS ALWAYS</span></h1>
                 <p className='text-justify text-custom-green leading-6 sm:leading-7 py-4 sm:py-5'>Welcome to Great Fitness, Los Angeles' premier destination for yoga and fitness enthusiasts. Nestled in the vibrant heart of the city, we offer a sanctuary where mind, body, and spirit align.</p>
                 <div className="grid-sub-items">
-                <button type="button" className="focus:outline-none font-semibold text-white bg-custom-green hover:bg-custom-green-light font-medium rounded-md text-sm p-3 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Book A Session</button>
+                 
+                <Session/>
                 <Link to={'contact'} spy={true} 
       smooth={true} 
       offset={-20} 
