@@ -59,7 +59,7 @@ const Login = () => {
         if(result.data.isAuthenticated) {
           dispatch(userAuth({
             user: result.data.user,
-            token: result.data.token,
+            token: result.data.accessToken,
             isAuthenticated: result.data.isAuthenticated
           }))
         }
