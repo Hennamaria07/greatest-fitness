@@ -92,7 +92,7 @@ const Signup = () => {
        setTimeout(() => navigate('/login'), 1000);
     } catch (error) {
       console.log(error);
-      toast.error(error.response.data.message, {
+      toast.error(error.message, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
