@@ -67,6 +67,7 @@ const Login = () => {
         toast.success(res.data.message, {
           position: "top-right",
           hideProgressBar: false,
+          autoClose: 1000,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
