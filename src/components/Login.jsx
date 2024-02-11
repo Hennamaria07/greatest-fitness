@@ -17,7 +17,7 @@ const Login = () => {
   console.log(password, email);
   const validate = () => {
     const passwordRegEx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-    const emailRegEx = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const errors = {};
 
     if (password === "") {

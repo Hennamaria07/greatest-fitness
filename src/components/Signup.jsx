@@ -19,7 +19,7 @@ const Signup = () => {
   const validate = () => {
     const nameRegEx = /^[a-zA-Z\s]{5,20}$/;
     const passwordRegEx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-    const emailRegEx = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     let errors = {};
 
     if (name === "") {
