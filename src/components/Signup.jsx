@@ -68,42 +68,47 @@ const Signup = () => {
     setEmailError("");
     setPasswordError("");
     setConfirmPasswordError("");
-    try {
+    // try {
       const res = await instance.post("/api/v1/user/sign-up", {
         fullName: name,
         email,
         password,
         confirmPassword
       });
-      console.log(res);
-      if (res.data.success) {
-        toast.success(res.data.message, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          transition: Slide,
-          theme: "colored",
-        })
-      }
-       setTimeout(() => navigate('/login'), 1000);
-    } catch (error) {
-      console.log(error);
-      toast.error(error.response.data.message, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        transition: Slide,
-        theme: "colored",
-      });
-    }
+      toast.promise(res, {
+      pending: 'Form is beening submitting...',
+      success: res?.data?.message,
+      error: res?.data?.message
+      })
+    //   console.log(res);
+    //   if (res.data.success) {
+    //     toast.success(res.data.message, {
+    //       position: "top-right",
+    //       autoClose: 5000,
+    //       hideProgressBar: false,
+    //       closeOnClick: true,
+    //       pauseOnHover: true,
+    //       draggable: true,
+    //       progress: undefined,
+    //       transition: Slide,
+    //       theme: "colored",
+    //     })
+    //   }
+    //    setTimeout(() => navigate('/login'), 1000);
+    // } catch (error) {
+    //   console.log(error);
+    //   toast.error(error.response.data.message, {
+    //     position: "top-right",
+    //     autoClose: 5000,
+    //     hideProgressBar: false,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     transition: Slide,
+    //     theme: "colored",
+    //   });
+    // }
   };
   return (
     <>
