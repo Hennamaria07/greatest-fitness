@@ -68,47 +68,42 @@ const Signup = () => {
     setEmailError("");
     setPasswordError("");
     setConfirmPasswordError("");
-    // try {
+    try {
       const res = await instance.post("/api/v1/user/sign-up", {
         fullName: name,
         email,
         password,
         confirmPassword
       });
-      toast.promise(res, {
-      pending: 'Form is beening submitting...',
-      success: res?.data?.message,
-      error: response?.data?.message
-      })
-    //   console.log(res);
-    //   if (res.data.success) {
-    //     toast.success(res.data.message, {
-    //       position: "top-right",
-    //       autoClose: 5000,
-    //       hideProgressBar: false,
-    //       closeOnClick: true,
-    //       pauseOnHover: true,
-    //       draggable: true,
-    //       progress: undefined,
-    //       transition: Slide,
-    //       theme: "colored",
-    //     })
-    //   }
-    //    setTimeout(() => navigate('/login'), 1000);
-    // } catch (error) {
-    //   console.log(error);
-    //   toast.error(error.response.data.message, {
-    //     position: "top-right",
-    //     autoClose: 5000,
-    //     hideProgressBar: false,
-    //     closeOnClick: true,
-    //     pauseOnHover: true,
-    //     draggable: true,
-    //     progress: undefined,
-    //     transition: Slide,
-    //     theme: "colored",
-    //   });
-    // }
+      console.log(res);
+      if (res.data.success) {
+        toast.success(res.data.message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          transition: Slide,
+          theme: "colored",
+        })
+      }
+       setTimeout(() => navigate('/login'), 1000);
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response.data.message, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        transition: Slide,
+        theme: "colored",
+      });
+    }
   };
   return (
     <>
@@ -121,19 +116,7 @@ const Signup = () => {
             <div className="flex justify-center items-center h-screen mx-5">
               <div>
                 <div className='text-center px-7'>
-                  <ToastContainer 
-                  position="top-right"
-                  autoClose={1500}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                  theme="colored"
-                  transition={Slide}
-                  />
+                  <ToastContainer />
                   <h1 className='text-4xl pt-4 text-[#5F6F52] font-semibold xl:flex hidden'>Join the Great Fitness Family</h1>
                   <h1 className='text-xl py-2 text-[#5F6F52] font-semibold xl:hidden'>Sign up</h1>
                   <p className='py-5 text-justify text-sm text-[#5F6F52] xl:flex hidden leading-6'>Welcome to Great Fitness! Sign up now to explore yoga</p>
